@@ -32,14 +32,14 @@ In these experiments we used the `Actitracker` dataset, released by Wireless Sen
 
 The dataset is not balanced and the distribution of the dataset with respect to the performed activities (class labels) is shown in the figure below.
 <p align="center">
-<img width="460" height="300" src="https://raw.githubusercontent.com/Shahnawax/HAR-CNN-Keras/master/dataset-distribution.png">
+<img width="460" height="300" src="dataset-distribution.png">
 </p>
 
 
 ### Evaluation
 A simple CNN based neural network is created using the topology in `HAR.py`. The dataset is splitted into two subgroups, `trainData` and `testData` with the ratio of `80` and `20`% respectively. The training data is further split into training and validation data with the same distribution. The HAR model created in `HAR.py` is then trained on the training data and validated on the validataion data. To evaluate the performance of this network, we write a script "evaluate_model.py". This script uses the `20%` of random samples in the dataset and tests the pretrained CNN model `model.h5`. Furhtermore, this script reports the percentage of the wrong predictions as error and creates a confusion matrix. The results show that the network has an average accuracy of 92.1 %. For further details, the confusion matrix for the HAR on the testData is shown in the figure below:
 <p align="center">
-<img width="460" height="300" src="https://raw.githubusercontent.com/Shahnawax/HAR-CNN-Keras/master/confusion_matrix.png">
+<img width="460" height="300" src="confusion_matrix.png">
 </p>
 
 
